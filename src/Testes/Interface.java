@@ -1,4 +1,4 @@
-package Testes;
+package testes;
 
 import javax.swing.*;
 
