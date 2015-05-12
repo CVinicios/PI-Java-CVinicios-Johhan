@@ -87,7 +87,7 @@ public class Loja
 					cambio = Cambio.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0, 1 ou 2");
 				}
@@ -102,7 +102,7 @@ public class Loja
 				cor = Cor.values()[scan.nextInt()];
 				loop = true;
 			}
-			catch(ArrayIndexOutOfBoundsException aiobe)
+			catch(ArrayIndexOutOfBoundsException exception)
 			{
 				System.out.println("Erro, favor digitar 0, 1, 2, 3 ou 4");
 			}
@@ -118,7 +118,7 @@ public class Loja
 					montadora = Marca.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0, 1 ou 2");
 				}
@@ -130,7 +130,7 @@ public class Loja
 					montadora = Marca.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 5 ou 6");
 				}
@@ -147,7 +147,7 @@ public class Loja
 					tipo = Tipo.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0 ou 1");
 				}
@@ -160,7 +160,7 @@ public class Loja
 					tipo = Tipo.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro,favor digitar 2 ou 3");
 				}
@@ -177,7 +177,7 @@ public class Loja
 					motorizacao = Motorizacao.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0, 1 ou 2");
 				}
@@ -193,7 +193,7 @@ public class Loja
 					cilindrada = Cilindrada.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0 ou 1");
 				}
@@ -208,7 +208,7 @@ public class Loja
 					cpTanque = Capacidade_tanque.values()[scan.nextInt()];
 					loop = true;
 				}
-				catch(ArrayIndexOutOfBoundsException aiobe)
+				catch(ArrayIndexOutOfBoundsException exception)
 				{
 					System.out.println("Erro, favor digitar 0, 1 ou 2");
 				}
