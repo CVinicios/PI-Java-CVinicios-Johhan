@@ -2,5 +2,5 @@ package enum_Automovel;
 
 public enum Modelo
 {
-	CIVIC,CP150,HB20;
+	CIVIC,HB20,GOL,CP150,CP350,CP600;
 }

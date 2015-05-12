@@ -2,5 +2,5 @@ package enum_Automovel;
 
 public enum Tipo
 {
-	HATCH,SEDAN;
+	HATCH,SEDAN,ESPORTIVA,CHOPPER;
 }
