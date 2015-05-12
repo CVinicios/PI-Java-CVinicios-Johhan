@@ -267,7 +267,7 @@ public class Loja
 		{
 			for(Carro elemento: carros)
 			{
-				if(elemento.chassi == chassi)
+				if(elemento.getChassi() == chassi)
 				{
 					elemento=null;
 					carroFound++;
@@ -277,7 +277,7 @@ public class Loja
 		{
 			for(Moto elemento: motos)
 			{
-				if(elemento.chassi == chassi)
+				if(elemento.getChassi() == chassi)
 				{
 					elemento=null;
 					carroFound++;
@@ -320,7 +320,7 @@ public class Loja
 		{
 			for(Carro elemento: carros)
 			{
-				if(elemento.chassi == chassi)
+				if(elemento.getChassi() == chassi)
 				{
 					System.out.println(elemento.toString());
 					carroFound++;
@@ -330,7 +330,7 @@ public class Loja
 		{
 			for(Moto elemento: motos)
 			{
-				if(elemento.chassi == chassi)
+				if(elemento.getChassi() == chassi)
 				{
 					System.out.println(elemento.toString());
 					carroFound++;

@@ -4,12 +4,12 @@ import enum_Automovel.*;
 
 public abstract class Automovel
 {
-	public Marca marca;
-	public Modelo modelo;
-	public Tipo tipo;
-	public Cor cor;
-	public String chassi;
-	public float preco;
+	protected Marca marca;
+	protected Modelo modelo;
+	protected Tipo tipo;
+	protected Cor cor;
+	protected String chassi;
+	protected float preco;
 	
 	public Marca getMarca() {
 		return marca;
