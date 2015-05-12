@@ -31,6 +31,23 @@ public class Moto extends Automovel
 		this.tipo = tipo;
 		this.cor = cor;
 		
+		
+	}
+
+	public Cilindrada getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(Cilindrada cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+
+	public Capacidade_tanque getCpTanque() {
+		return cpTanque;
+	}
+
+	public void setCpTanque(Capacidade_tanque cpTanque) {
+		this.cpTanque = cpTanque;
 	}
 	
 }

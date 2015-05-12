@@ -30,6 +30,19 @@ public class Carro extends Automovel
 		this.cambio = cambio2;
 		this.tipo = tipo;
 		this.cor = cor;
+		
+	}
+	public Motorizacao getMotorizacao() {
+		return motorizacao;
+	}
+	public void setMotorizacao(Motorizacao motorizacao) {
+		this.motorizacao = motorizacao;
+	}
+	public Cambio getCambio() {
+		return cambio;
+	}
+	public void setCambio(Cambio cambio) {
+		this.cambio = cambio;
 	}
 	
 }
