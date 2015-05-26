@@ -15,7 +15,7 @@ public class Main
 		
 		do
 		{
-			System.out.println("Digite o numero correspondente a opção desejada");
+			System.out.println("Digite o numero correspondente a opï¿½ï¿½o desejada");
 			System.out.println("1 = Adicionar Veiculo");
 			System.out.println("2 = Remover Veiculo");
 			System.out.println("3 = Pesquisar Veiculo");
@@ -43,10 +43,11 @@ public class Main
 				avc.ListarAutomovel();
 				break;
 			default:
-				System.out.println("Opção inválida. Escolha uma das opções listadas.");
+				System.out.println("Opï¿½ï¿½o invï¿½lida. Escolha uma das opï¿½ï¿½es listadas.");
 				break;
 		}
 			
 		} while (opcao!=0);
+		scan.close();
 	}
 }
