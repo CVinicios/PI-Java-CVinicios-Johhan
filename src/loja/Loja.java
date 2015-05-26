@@ -19,7 +19,7 @@ import enum_Automovel.Veiculo;
 
 public class Loja
 {
-	String endereço;
+	String endereco;
 	String nome;
 	ArrayList<Carro> carros = new ArrayList<Carro>();;
 	ArrayList<Moto> motos = new ArrayList<Moto>();;
@@ -83,7 +83,7 @@ public class Loja
 			{
 				try
 				{
-					System.out.println("Digite numero correspondente ao cambio:(0)AUTOMATICO (1)SEMI-AUTOMÀTICO (2)MANUAL");
+					System.out.println("Digite numero correspondente ao cambio:(0)AUTOMATICO (1)SEMI-AUTOMï¿½TICO (2)MANUAL");
 					cambio = Cambio.values()[scan.nextInt()];
 					loop = true;
 				}
@@ -98,7 +98,7 @@ public class Loja
 		{
 			try
 			{
-				System.out.println("Digite numero correspondente à cor: (0)ROSA (1)VERMELHO (2)AZUL (3)AMARELO (4)PRETO");
+				System.out.println("Digite numero correspondente ï¿½ cor: (0)ROSA (1)VERMELHO (2)AZUL (3)AMARELO (4)PRETO");
 				cor = Cor.values()[scan.nextInt()];
 				loop = true;
 			}
@@ -114,7 +114,7 @@ public class Loja
 			{
 				try
 				{
-					System.out.println("Digite numero correspondente à montadora: (0)HONDA, (1)HYUNDAI, (2)MITSUBISHI");
+					System.out.println("Digite numero correspondente ï¿½ montadora: (0)HONDA, (1)HYUNDAI, (2)MITSUBISHI");
 					montadora = Marca.values()[scan.nextInt()];
 					loop = true;
 				}
@@ -126,7 +126,7 @@ public class Loja
 			{
 				try
 				{
-					System.out.println("Digite numero correspondente à montadora: (4)COBRA, (5)YAMAHA");
+					System.out.println("Digite numero correspondente ï¿½ montadora: (4)COBRA, (5)YAMAHA");
 					montadora = Marca.values()[scan.nextInt()];
 					loop = true;
 				}
@@ -222,7 +222,7 @@ public class Loja
 		{
 			try
 			{
-				System.out.println("Digite o preço do Veiculo");
+				System.out.println("Digite o preï¿½o do Veiculo");
 				preco = scan.nextFloat();
 				loop = true;
 			}
@@ -286,7 +286,7 @@ public class Loja
 		}
 		
 		if(carroFound==-1)
-			System.out.println("O veiculo não foi encontrado");
+			System.out.println("O veiculo nï¿½o foi encontrado");
 		else
 			System.out.println("Veiculo excluido com sucesso");
 	}
@@ -338,7 +338,7 @@ public class Loja
 			}
 		}
 		if(carroFound==-1)
-		System.out.println("O veiculo não foi encontrado");
+		System.out.println("O veiculo nï¿½o foi encontrado");
 	}
 	public void ListarAutomovel()
 	{
