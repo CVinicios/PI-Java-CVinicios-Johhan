@@ -96,7 +96,7 @@ public class Loja
 	}
 	public void BuscarVeiculo ()
 	{
-		System.out.println("Digite o chassi do carro que quer procurar");
+		System.out.println("Buscar veiculo pelo Chassi");
 		String busca = Interface.askChassi();
 		
 		for(Automovel a: veiculos)

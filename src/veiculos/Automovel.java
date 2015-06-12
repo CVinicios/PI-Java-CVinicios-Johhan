@@ -1,6 +1,7 @@
 package veiculos;
 
 import java.util.HashMap;
+import java.util.InputMismatchException;
 
 import enum_Automovel.Motorizacao;
 import enum_Automovel.Veiculo;
@@ -16,23 +17,28 @@ public class Automovel
 	public Automovel()
 	{
 		map = new HashMap<String, Enum>();
-		
-		map.put("Veiculo", Interface.askVeiculo());
-		map.put("Marca", Interface.askMarca());
-		map.put("Modelo", Interface.askModelo());
-		map.put("Tipo", Interface.askTipo());
-		map.put("Cor", Interface.askCor());
-		if(map.containsValue(Veiculo.MOTO))
+		try
 		{
-			map.put("Capacidade Tanque", Interface.askCapTanque());
-			map.put("Cilindrada", Interface.askCilindrada());
-		}else if(map.containsValue(Veiculo.CARRO))
+			map.put("Veiculo", Interface.askVeiculo());
+			map.put("Marca", Interface.askMarca());
+			map.put("Modelo", Interface.askModelo());
+			map.put("Tipo", Interface.askTipo());
+			map.put("Cor", Interface.askCor());
+			if(map.containsValue(Veiculo.MOTO))
+			{
+				map.put("Capacidade Tanque", Interface.askCapTanque());
+				map.put("Cilindrada", Interface.askCilindrada());
+			}else if(map.containsValue(Veiculo.CARRO))
+			{
+				map.put("Cambio", Interface.askCambio());
+				map.put("Motorizacao", Interface.askMotorização());
+			}
+			chassi = Interface.askChassi();
+			preco = Interface.askPreco();
+		}catch(InputMismatchException inputMismatchException)
 		{
-			map.put("Cambio", Interface.askCambio());
-			map.put("Motorizacao", Interface.askMotorização());
+			System.out.println("Erro: Operação cancelada");
 		}
-		chassi = Interface.askChassi();
-		preco = Interface.askPreco();
 		
 	}
 	public HashMap<String, Enum> getMapa()
@@ -45,7 +51,7 @@ public class Automovel
 	@Override
 	public String toString()
 	{
-		return "Automovel [Especificações :=" + map + ", preco=" + preco + ", chassi="
+		return "Automovel [Especificações :=" + map.values() + ", preco=" + preco + ", chassi="
 				+ chassi + "]";
 	}
 
