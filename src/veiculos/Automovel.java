@@ -1,50 +1,66 @@
 package veiculos;
 
-import enum_Automovel.*;
+import java.util.HashMap;
 
-public abstract class Automovel
+import enum_Automovel.Motorizacao;
+import enum_Automovel.Veiculo;
+
+import main.Interface;
+
+public class Automovel
 {
-	protected Marca marca;
-	protected Modelo modelo;
-	protected Tipo tipo;
-	protected Cor cor;
-	protected String chassi;
-	protected float preco;
+	public HashMap<String, Enum> map;
+	public float preco;
+	public String chassi;
 	
-	public Marca getMarca() {
-		return marca;
+	public Automovel()
+	{
+		map = new HashMap<String, Enum>();
+		
+		map.put("Veiculo", Interface.askVeiculo());
+		map.put("Marca", Interface.askMarca());
+		map.put("Modelo", Interface.askModelo());
+		map.put("Tipo", Interface.askTipo());
+		map.put("Cor", Interface.askCor());
+		if(map.containsValue(Veiculo.MOTO))
+		{
+			map.put("Capacidade Tanque", Interface.askCapTanque());
+			map.put("Cilindrada", Interface.askCilindrada());
+		}else if(map.containsValue(Veiculo.CARRO))
+		{
+			map.put("Cambio", Interface.askCambio());
+			map.put("Motorizacao", Interface.askMotorização());
+		}
+		chassi = Interface.askChassi();
+		preco = Interface.askPreco();
+		
 	}
-	public void setMarca(Marca marca) {
-		this.marca = marca;
+
+	
+
+
+	@Override
+	public String toString() {
+		return "Automovel [Especificações :=" + map + ", preco=" + preco + ", chassi="
+				+ chassi + "]";
 	}
-	public Modelo getModelo() {
-		return modelo;
+
+
+
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if(obj == this)
+			return true;
+		if(obj instanceof Automovel)
+		{
+			Automovel other = (Automovel)obj;
+			if(other.map == this.map && other.preco == this.preco && other.chassi == this.chassi)
+				return true;
+		}
+		return false;
 	}
-	public void setModelo(Modelo modelo) {
-		this.modelo = modelo;
-	}
-	public Tipo getTipo() {
-		return tipo;
-	}
-	public void setTipo(Tipo tipo) {
-		this.tipo = tipo;
-	}
-	public Cor getCor() {
-		return cor;
-	}
-	public void setCor(Cor cor) {
-		this.cor = cor;
-	}
-	public String getChassi() {
-		return chassi;
-	}
-	public void setChassi(String chassi) {
-		this.chassi = chassi;
-	}
-	public float getPreco() {
-		return preco;
-	}
-	public void setPreco(float preco) {
-		this.preco = preco;
-	}
+
+
 }

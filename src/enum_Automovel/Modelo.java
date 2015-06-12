@@ -2,5 +2,18 @@ package enum_Automovel;
 
 public enum Modelo
 {
-	CIVIC,HB20,GOL,CP150,CP350,CP600;
+	CIVIC(0),HB20(1),GOL(2),CP150(3),CP350(4),CP600(5);
+	
+	int indice;
+	
+	private Modelo(int i)
+	{
+		indice = i;
+	}
+	
+	
+	public int getIndice()
+	{
+		return indice;
+	}
 }

@@ -2,6 +2,8 @@ package main;
 
 import java.util.Scanner;
 
+import enum_Automovel.Veiculo;
+
 import loja.Loja;
 
 
@@ -9,45 +11,45 @@ public class Main
 {
 	public static void main(String[] args) 
 	{	
-		Loja avc = new Loja();
-		int opcao;
-		Scanner scan = new Scanner(System.in);
+		Loja loja = new Loja("Mon Senhor","MFX Veiculos");
+		Scanner input = new Scanner(System.in);
+		int opcao = -1;
 		
 		do
 		{
-			System.out.println("Digite o numero correspondente a opï¿½ï¿½o desejada");
-			System.out.println("1 = Adicionar Veiculo");
-			System.out.println("2 = Remover Veiculo");
-			System.out.println("3 = Pesquisar Veiculo");
-			System.out.println("4 = Buscar Veiculo");
-			System.out.println("5 = Listar Veiculos");
-			System.out.println("0 = EXIT");
+			System.out.println("Digite o numero correspondente a opção desejada");
+			System.out.println("1 = Adicionar veiculo");
+			System.out.println("2 = Remover veiculo");
+			System.out.println("3 = Pesquisar veiculos");
+			System.out.println("4 = Procurar veiculo por chassi");
+			System.out.println("5 = Listar estoque");
+			System.out.println("0 = Sair");
 			
-			opcao = scan.nextInt();
+			opcao = input.nextInt();
 			
-		switch(opcao)
-		{
-			case 1:
-				avc.AdicionarVeiculo();
-				break;
-			case 2:
-				avc.RemoverVeiculo();
-				break;
-			case 3:
-				avc.PesquisarVeiculo();
-				break;
-			case 4:
-				avc.BuscarAutomovel();
-				break;
-			case 5:
-				avc.ListarAutomovel();
-				break;
-			default:
-				System.out.println("Opï¿½ï¿½o invï¿½lida. Escolha uma das opï¿½ï¿½es listadas.");
-				break;
-		}
-			
-		} while (opcao!=0);
-		scan.close();
+			switch(opcao)
+			{
+				case 1:
+					loja.AdicionarVeiculo();
+					break;
+				case 2:
+					loja.RemoverVeiculo();
+					break;
+				case 3:
+					loja.PesquisarVeiculo();
+					break;
+				case 4:
+					loja.BuscarVeiculo();
+					break;
+				case 5:
+					loja.ListarVeiculos();
+					break;
+				default:
+					break;
+			}
+				
+		}while(opcao >0);
+		
+		
 	}
 }
