@@ -13,7 +13,6 @@ public class Interface
 	public static Enum<Veiculo> askVeiculo() throws InputMismatchException
 	{
 		int escolha=-1;
-		System.out.println("Moto(0) ou Carro?(1)");
 		
 		while(escolha < 0 || escolha > 1 )
 		{
@@ -41,10 +40,11 @@ public class Interface
 	public static Enum<Marca> askMarca() throws InputMismatchException
 	{
 		int escolha=-1;
-		System.out.println("Honda(0),HYUNDAI(1),MITSUBISHI(2),COBRA(3),YAMAHA(4)");
 		
 		while(escolha < 0 || escolha > 4 )
 		{
+			System.out.println("Honda(0),HYUNDAI(1),MITSUBISHI(2),COBRA(3),YAMAHA(4)");
+
 			try
 			{
 				escolha = input.nextInt();

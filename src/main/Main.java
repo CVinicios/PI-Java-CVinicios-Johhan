@@ -2,8 +2,6 @@ package main;
 
 import java.util.Scanner;
 
-import enum_Automovel.Veiculo;
-
 import loja.Loja;
 
 
@@ -45,11 +43,13 @@ public class Main
 					loja.ListarVeiculos();
 					break;
 				default:
+					System.out.println("Saindo do sitema");
 					break;
 			}
 				
 		}while(opcao >0);
 		
+		input.close();
 		
 	}
 }

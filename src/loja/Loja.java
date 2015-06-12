@@ -25,6 +25,7 @@ public class Loja
 		System.out.println("Digite os dados do veiculo que quer adicionar");
 		Automovel novo = new Automovel();
 		veiculos.add(novo);
+		System.out.println("Veiculo adicionado com sucesso");
 		
 	}
 	public void RemoverVeiculo()
@@ -35,9 +36,14 @@ public class Loja
 		for(Automovel a: veiculos)
 		{
 			if(remove.equals(a))
+			{
+				
 				veiculos.remove(a);
+				System.out.println("Veiculo removido com sucesso");
+				return;
+			}			
 		}
-		
+		System.out.println("Veiculo nao foi encontrado");
 	}
 	public void PesquisarVeiculo()
 	{
@@ -95,12 +101,14 @@ public class Loja
 		
 		for(Automovel a: veiculos)
 		{
-			if(busca == a.chassi)
+			if(busca.equals(a.chassi))
 			{
 				System.out.println("Carro encontrado");
 				System.out.println(a.toString());
+				return;
 			}
 		}
+		System.out.println("Carro nao encontrado");
 		
 	}
 	public void ListarVeiculos()

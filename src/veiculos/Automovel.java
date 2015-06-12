@@ -35,12 +35,16 @@ public class Automovel
 		preco = Interface.askPreco();
 		
 	}
-
+	public HashMap<String, Enum> getMapa()
+	{
+		return map;
+	}
 	
 
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Automovel [Especificações :=" + map + ", preco=" + preco + ", chassi="
 				+ chassi + "]";
 	}
@@ -51,12 +55,13 @@ public class Automovel
 	@Override
 	public boolean equals(Object obj)
 	{
+		
 		if(obj == this)
 			return true;
 		if(obj instanceof Automovel)
 		{
 			Automovel other = (Automovel)obj;
-			if(other.map == this.map && other.preco == this.preco && other.chassi == this.chassi)
+			if(this.getMapa().equals(other.getMapa()) && other.preco == this.preco && other.chassi.equals(this.chassi))
 				return true;
 		}
 		return false;
